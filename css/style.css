@@ -1,0 +1,154 @@
+/* --- RESET ET BASES --- */
+* {
+    box-sizing: border-box; /* Permet de mieux gérer les largeurs avec le padding */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto; /* Centre le contenu principal */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TITRES --- */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #e74c3c;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+/* --- ARTICLES (JEUX & ANIMÉS) --- */
+article {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-5px); /* Petit effet de soulèvement au survol */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 200px;
+    object-fit: cover; /* Recadre l'image proprement si nécessaire */
+    display: block;
+    margin-bottom: 15px;
+}
+
+article button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+article button:hover {
+    background-color: #2980b9;
+}
+
+/* --- FORMULAIRE (La partie importante) --- */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Autorise le passage à la ligne */
+    gap: 20px; /* Espace entre les éléments */
+    background-color: #f0f2f5;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* On cible les div à l'intérieur du formulaire */
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ASTUCE POUR NOM ET PRÉNOM SUR LA MÊME LIGNE :
+   On cible le 1er (Nom) et le 2ème (Prénom) div du formulaire.
+   On leur donne une largeur d'environ 50% moins l'espace du gap.
+*/
+form > div:nth-of-type(1), 
+form > div:nth-of-type(2) {
+    width: calc(50% - 10px);
+}
+
+/* Les autres champs (Email et Message) prennent 100% de la largeur */
+form > div:nth-of-type(3),
+form > div:nth-of-type(4) {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Bouton pleine largeur */
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+/* --- VERSION MOBILE --- */
+/* Si l'écran est petit, on remet tout en colonne pour que ce soit lisible */
+@media (max-width: 600px) {
+    form > div:nth-of-type(1), 
+    form > div:nth-of-type(2) {
+        width: 100%;
+    }
+}
