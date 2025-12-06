@@ -1,154 +1,187 @@
-/* --- RESET ET BASES --- */
-* {
-    box-sizing: border-box; /* Permet de mieux gérer les largeurs avec le padding */
-}
-
+/* Style global */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: Arial, sans-serif; /* Police basique */
+    background-color: #eee;
     margin: 0;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 0;
+    color: #333;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto; /* Centre le contenu principal */
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Accessibilité : Focus très visible */
+*:focus {
+    outline: 3px solid rgb(255, 0, 0);
+    outline-offset: 2px;
 }
 
-/* --- TITRES --- */
-h1 {
+/* En-tête */
+header {
+    background-color: #333;
+    padding: 10px;
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
 }
 
-h2 {
-    color: #e74c3c;
-    margin-top: 40px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-h3 {
-    color: #2980b9;
-    margin-bottom: 10px;
+nav li {
+    display: inline-block; /* Méthode old school pour aligner */
+    margin: 0 10px;
 }
 
-/* --- ARTICLES (JEUX & ANIMÉS) --- */
-article {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    border: 1px solid white; /* Effet simple au survol */
+    text-decoration: underline;
+}
+
+/* Contenu */
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fafafa;
-    transition: transform 0.2s;
+    border: 1px solid #ccc; /* Bordure simple */
 }
 
-article:hover {
-    transform: translateY(-5px); /* Petit effet de soulèvement au survol */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+h1, h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Articles */
+article {
+    border: 2px solid #333; /* Bordure épaisse "étudiant" */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
 }
 
 article img {
     max-width: 100%;
+    width: 250px;
     height: auto;
-    border-radius: 5px;
-    max-height: 200px;
-    object-fit: cover; /* Recadre l'image proprement si nécessaire */
-    display: block;
-    margin-bottom: 15px;
+    border: 1px solid #000;
 }
 
 article button {
-    background-color: #3498db;
+    background-color: #0056b3;
     color: white;
+    padding: 10px;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 16px;
 }
 
 article button:hover {
-    background-color: #2980b9;
+    background-color: #003d80;
 }
 
-/* --- FORMULAIRE (La partie importante) --- */
-form {
-    display: flex;
-    flex-wrap: wrap; /* Autorise le passage à la ligne */
-    gap: 20px; /* Espace entre les éléments */
-    background-color: #f0f2f5;
-    padding: 25px;
-    border-radius: 8px;
-}
-
-/* On cible les div à l'intérieur du formulaire */
-form > div {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ASTUCE POUR NOM ET PRÉNOM SUR LA MÊME LIGNE :
-   On cible le 1er (Nom) et le 2ème (Prénom) div du formulaire.
-   On leur donne une largeur d'environ 50% moins l'espace du gap.
-*/
-form > div:nth-of-type(1), 
-form > div:nth-of-type(2) {
-    width: calc(50% - 10px);
-}
-
-/* Les autres champs (Email et Message) prennent 100% de la largeur */
-form > div:nth-of-type(3),
-form > div:nth-of-type(4) {
+/* Tableau */
+table {
     width: 100%;
+    border-collapse: collapse; /* Pour coller les bordures */
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black; /* Bordures noires classiques */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd;
+}
+
+.categorie {
+    background-color: #e0e0e0; /* Un gris léger pour séparer visuellement */
+    font-weight: bold;
+    text-align: center;     /* Centre horizontalement */
+    vertical-align: middle; /* Centre verticalement (Indispensable pour rowspan) */
+}
+
+tfoot {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+tfoot th{
+    color: #333;
+}
+
+/* Formulaire */
+form {
+    background-color: #e2e2e2;
+    padding: 15px;
+    border: 1px solid #999;
+}
+
+.champ {
+    margin-bottom: 15px;
 }
 
 label {
+    display: block; /* Pour mettre le label au dessus de l'input */
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 8px;
+    border: 1px solid #777;
+    box-sizing: border-box; /* Important pour que le padding ne casse pas la largeur */
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+/* Astuce pour mettre nom/prénom côte à côte */
+.ligne-identite {
+    display: flex;
+    gap: 20px;
+}
+
+.ligne-identite .champ {
+    width: 50%;
 }
 
 button[type="submit"] {
-    background-color: #27ae60;
+    background-color: green;
     color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%; /* Bouton pleine largeur */
-    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
-    background-color: #219150;
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-/* --- VERSION MOBILE --- */
-/* Si l'écran est petit, on remet tout en colonne pour que ce soit lisible */
-@media (max-width: 600px) {
-    form > div:nth-of-type(1), 
-    form > div:nth-of-type(2) {
-        width: 100%;
-    }
+/* Modale */
+dialog {
+    border: 2px solid black;
+    padding: 20px;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0,0,0,0.8);
+}
+
+body:has(dialog[open]) {
+    overflow: hidden;
 }

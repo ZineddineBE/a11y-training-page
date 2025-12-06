@@ -4,112 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Mes jeux/animés favoris</title>
+    <title>Mes passions : Jeux et Animés</title>
 </head>
 <body>
 
-    <header>
-
-
+    <header role="banner">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#jeux">Jeux-vidéos</a></li>
+                <li><a href="#animes">Mes Animés</a></li>
+                <li><a href="#stats">Mes Statistiques</a></li>
+                <li><a href="#contact">Me contacter</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
         <h1>Mes jeux-vidéos et mes animés favoris</h1>
 
-        <section>
+        <section id="jeux">
             <h2>Jeux-vidéos</h2>
 
             <article>
                 <h3>League of Legends</h3>
-                <img src="img/jeux/league_of_legends.jpg" alt="Affiche du jeu League of Legends" />
+                <img src="img/jeux/league_of_legends.jpg" alt="Affiche officielle de League of Legends" />
                 <p>League of Legends est un MOBA compétitif où deux équipes de cinq joueurs s'affrontent sur la Faille de l'invocateur.</p>
-                <button>En savoir plus</button>
+                <button onclick="ouvrir('modal-lol')">En savoir plus</button>
             </article>
-
 
             <article>
                 <h3>Rocket League</h3>
-                <img src="img/jeux/rocket_league.png" alt="Affiche du jeu Rocket League" />
+                <img src="img/jeux/rocket_league.png" alt="Voitures jouant au football" />
                 <p>Rocket League combine football et voitures acrobatiques pour des matchs rapides et spectaculaires.</p>
-                <button>En savoir plus</button>
+                <button onclick="ouvrir('modal-rl')">En savoir plus</button>
             </article>
-
 
             <article>
                 <h3>H1Z1</h3>
-                <img src="img/jeux/h1z1.jpg" alt="Affiche du jeu H1Z1" />
-                <p>H1Z1 est un pionnier du Battle Royale où les joueurs s'affrontent pour être le dernier survivant dans une zone qui rétrécit.</p>
-                <button>En savoir plus</button>
+                <img src="img/jeux/h1z1.jpg" alt="Personnage armé dans H1Z1" />
+                <p>H1Z1 est un pionnier du Battle Royale où les joueurs s'affrontent pour être le dernier survivant.</p>
+                <button onclick="ouvrir('modal-h1z1')">En savoir plus</button>
             </article>
-
         </section>
 
-        <section>
+        <section id="stats">
+            <h2>Mes statistiques</h2>
+            
+            <table border="1"> 
+                <caption>Récapitulatif de mes passions (Jeux et Animés)</caption>
+                
+                <thead>
+                    <tr>
+                        <th scope="col">Catégorie</th>
+                        <th scope="col">Nom de l'oeuvre</th>
+                        <th scope="col">Temps / Épisodes</th>
+                        <th scope="col">Année de début</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="categorie">Jeux Vidéos</th>
+                        
+                        <th scope="row">League of Legends</th>
+                        <td>Pas disponible</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rocket League</th>
+                        <td>~2000 h</td>
+                        <td>2016</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">H1Z1</th>
+                        <td>473,4 h</td>
+                        <td>2016</td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="3" scope="rowgroup" class="categorie">Animés</th>
+                        
+                        <th scope="row">Bleach</th>
+                        <td>366 épisodes</td>
+                        <td>2004</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Solo Leveling</th>
+                        <td>25 épisodes</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">My Hero Academia</th>
+                        <td>150+ épisodes</td>
+                        <td>2016</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Total des oeuvres listées</th>
+                        <td colspan="2">6 oeuvres favorites</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="animes">
             <h2>Animés</h2>
 
             <article>
                 <h3>Bleach</h3>
-                <img src="img/animes/bleach.png" alt="Ichigo Kurosaki de l'anime Bleach" />
+                <img src="img/animes/bleach.png" alt="Ichigo Kurosaki de Bleach" />
                 <p>Bleach suit les aventures d'Ichigo, un humain devenu Shinigami chargé de protéger les âmes.</p>
-                <button>En savoir plus</button>
+                <button onclick="ouvrir('modal-bleach')">En savoir plus</button>
             </article>
-
 
             <article>
                 <h3>Solo Leveling</h3>
-                <img src="img/animes/solo_leveling.jpg" alt="Sung Jin-Woo de Solo Leveling" />
-                <p>Solo Leveling raconte la montée en puissance de Jin-Woo dans un monde rempli de donjons et de monstres.</p>
-                <button>En savoir plus</button>
+                <img src="img/animes/solo_leveling.jpg" alt="Sung Jin-Woo" />
+                <p>Solo Leveling raconte la montée en puissance de Jin-Woo dans un monde rempli de donjons.</p>
+                <button onclick="ouvrir('modal-sl')">En savoir plus</button>
             </article>
-
 
             <article>
                 <h3>My Hero Academia</h3>
-                <img src="img/animes/my_hero_academia.jpg" alt="Izuku Midoriya de My Hero Academia" />
+                <img src="img/animes/my_hero_academia.jpg" alt="Izuku Midoriya" />
                 <p>Dans un monde où presque tout le monde possède un pouvoir, Izuku rêve de devenir un héros.</p>
-                <button>En savoir plus</button>
+                <button onclick="ouvrir('modal-mha')">En savoir plus</button>
             </article>
         </section>
 
-        <section>
-            <h2>Donne moi tes top 3 jeux-vidéos/animés :</h2>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
             <form action="#" method="post">
-                <div>
-                    <label for="nom">Votre nom :</label>
-                    <br>
-                    <input type="text" id="nom" name="nom" required>
+                
+                <div class="ligne-identite">
+                    <div class="champ">
+                        <label for="nom">Votre nom :</label>
+                        <input type="text" id="nom" name="nom" required autocomplete="family-name">
+                    </div>
+
+                    <div class="champ">
+                        <label for="prenom">Votre prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+                    </div>
                 </div>
 
-                <div>
-                    <label for="prenom">Votre prénom :</label>
-                    <br>
-                    <input type="text" id="prenom" name="prenom" required>
-                </div>
-
-                <div>
+                <div class="champ">
                     <label for="email">Votre email :</label>
-                    <br>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
 
-                <div>
-                    <label for="message">Ton message</label>
-                    <br>
-                    <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+                <div class="champ">
+                    <label for="message">Votre Top 3 Jeux/Animés :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <br>
-
-                <button type="submit">Envoyer le message</button>
+                
+                <button type="submit">Envoyer</button>
             </form>
         </section>
 
     </main>
 
-    <footer>
-
-
+    <footer role="contentinfo">
+        <p>Site réalisé pour l'évaluation HTML/CSS - 2024</p>
     </footer>
-    
+
+    <dialog id="modal-lol">
+        <h3>League of Legends</h3>
+        <p><strong>Pourquoi j'aime :</strong> La stratégie d'équipe, les mécaniques de jeu et l'esport.</p>
+        <p><strong>Meilleur souvenir :</strong> L'arrivée en LEC de la KCORP.</p>
+        <button onclick="fermer('modal-lol')">Fermer</button>
+    </dialog>
+
+    <dialog id="modal-rl">
+        <h3>Rocket League</h3>
+        <p><strong>Pourquoi j'aime :</strong> La liberté dans les déplacement, la créativité et l'esport.</p>
+        <p><strong>Meilleur souvenir :</strong> Les coupe du monde 2025 à Lyon que j'ai pu suivre sur place.</p>
+        <button onclick="fermer('modal-rl')">Fermer</button>
+    </dialog>
+
+    <dialog id="modal-h1z1">
+        <h3>H1Z1</h3>
+        <p><strong>Pourquoi j'aime :</strong> L'ambiance, le stress et les mécaniques de tir (double tap).</p>
+        <p><strong>Meilleur souvenir :</strong> Mes parties en duo avec mon cousin.</p>
+        <button onclick="fermer('modal-h1z1')">Fermer</button>
+    </dialog>
+
+    <dialog id="modal-bleach">
+        <h3>Bleach</h3>
+        <p><strong>Pourquoi j'aime :</strong> Les émotions, les combats et les OST.</p>
+        <p><strong>Meilleur souvenir :</strong> Les entrées d'Ichigo avec l'OST Number One de Shiro SAGISU.</p>
+        <button onclick="fermer('modal-bleach')">Fermer</button>
+    </dialog>
+
+    <dialog id="modal-sl">
+        <h3>Solo Leveling</h3>
+        <p><strong>Pourquoi j'aime :</strong> L'évolution du héros et les combats épiques.</p>
+        <p><strong>Meilleur souvenir :</strong> Le combat de Sung Jinwoo contre Beru.</p>
+        <button onclick="fermer('modal-sl')">Fermer</button>
+    </dialog>
+
+    <dialog id="modal-mha">
+        <h3>My Hero Academia</h3>
+        <p><strong>Pourquoi j'aime :</strong> L'émotion des combats et des OST épiques.</p>
+        <p><strong>Meilleur souvenir :</strong> Le combat d'Izuku Midoriya contre Katsuki Bakugo.</p>
+        <button onclick="fermer('modal-mha')">Fermer</button>
+    </dialog>
+
+    <script>
+        function ouvrir(id) {
+            let modale = document.getElementById(id);
+            modale.showModal();
+        }
+
+        function fermer(id) {
+            let modale = document.getElementById(id);
+            modale.close();
+        }
+    </script>
+
 </body>
 </html>
