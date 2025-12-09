@@ -1,19 +1,16 @@
-/* Style global */
 body {
-    font-family: Arial, sans-serif; /* Police basique */
+    font-family: Arial, sans-serif;
     background-color: #eee;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-/* Accessibilité : Focus très visible */
 *:focus {
     outline: 3px solid rgb(255, 0, 0);
     outline-offset: 2px;
 }
 
-/* En-tête */
 header {
     background-color: #333;
     padding: 10px;
@@ -26,7 +23,7 @@ nav ul {
 }
 
 nav li {
-    display: inline-block; /* Méthode old school pour aligner */
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -39,17 +36,16 @@ nav a {
 }
 
 nav a:hover {
-    border: 1px solid white; /* Effet simple au survol */
+    border: 1px solid white;
     text-decoration: underline;
 }
 
-/* Contenu */
 main {
     width: 80%;
     margin: 20px auto;
     background-color: white;
     padding: 20px;
-    border: 1px solid #ccc; /* Bordure simple */
+    border: 1px solid #ccc;
 }
 
 h1, h2 {
@@ -57,9 +53,8 @@ h1, h2 {
     border-bottom: 2px solid #0056b3;
 }
 
-/* Articles */
 article {
-    border: 2px solid #333; /* Bordure épaisse "étudiant" */
+    border: 2px solid #333;
     padding: 15px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
@@ -85,15 +80,14 @@ article button:hover {
     background-color: #003d80;
 }
 
-/* Tableau */
 table {
     width: 100%;
-    border-collapse: collapse; /* Pour coller les bordures */
+    border-collapse: collapse;
     margin-top: 10px;
 }
 
 th, td {
-    border: 1px solid black; /* Bordures noires classiques */
+    border: 1px solid black;
     padding: 10px;
     text-align: left;
 }
@@ -103,10 +97,10 @@ th {
 }
 
 .categorie {
-    background-color: #e0e0e0; /* Un gris léger pour séparer visuellement */
+    background-color: #e0e0e0;
     font-weight: bold;
-    text-align: center;     /* Centre horizontalement */
-    vertical-align: middle; /* Centre verticalement (Indispensable pour rowspan) */
+    text-align: center;
+    vertical-align: middle;
 }
 
 tfoot {
@@ -119,7 +113,6 @@ tfoot th{
     color: #333;
 }
 
-/* Formulaire */
 form {
     background-color: #e2e2e2;
     padding: 15px;
@@ -131,19 +124,18 @@ form {
 }
 
 label {
-    display: block; /* Pour mettre le label au dessus de l'input */
+    display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 input, textarea {
-    width: 100%; /* Prend toute la largeur disponible */
+    width: 100%;
     padding: 8px;
     border: 1px solid #777;
-    box-sizing: border-box; /* Important pour que le padding ne casse pas la largeur */
+    box-sizing: border-box;
 }
 
-/* Astuce pour mettre nom/prénom côte à côte */
 .ligne-identite {
     display: flex;
     gap: 20px;
@@ -162,7 +154,6 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -171,7 +162,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Modale */
 dialog {
     border: 2px solid black;
     padding: 20px;
