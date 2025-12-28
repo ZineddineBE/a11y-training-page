@@ -10,7 +10,7 @@
 <body>
 
     <header role="banner">
-        <nav role="navigation">
+        <nav role="navigation" aria-label="Menu principal">
             <ul>
                 <li><a href="#jeux">Jeux-vidéos</a></li>
                 <li><a href="#animes">Mes Animés</a></li>
@@ -20,62 +20,62 @@
         </nav>
     </header>
 
-    <main>
+    <main id="contenu-principal">
 
         <h1>Mes jeux-vidéos et mes animés favoris</h1>
 
-        <section id="jeux">
-            <h2>Jeux-vidéos</h2>
+        <section id="jeux" aria-labelledby="titre-jeux">
+            <h2 id="titre-jeux">Jeux-vidéos</h2>
 
             <article>
                 <h3>League of Legends</h3>
                 <img src="img/jeux/league_of_legends.jpg" alt="Affiche officielle de League of Legends" />
                 <p>League of Legends est un MOBA compétitif où deux équipes de cinq joueurs s'affrontent sur la Faille de l'invocateur.</p>
-                <button onclick="ouvrir('modal-lol')">En savoir plus</button>
+                <button onclick="ouvrir('modal-lol')" aria-controls="modal-lol" aria-label="En savoir plus sur League of Legends">En savoir plus</button>
             </article>
 
             <article>
                 <h3>Rocket League</h3>
                 <img src="img/jeux/rocket_league.png" alt="Voitures jouant au football" />
                 <p>Rocket League combine football et voitures acrobatiques pour des matchs rapides et spectaculaires.</p>
-                <button onclick="ouvrir('modal-rl')">En savoir plus</button>
+                <button onclick="ouvrir('modal-rl')" aria-controls="modal-rl" aria-label="En savoir plus sur Rocket League">En savoir plus</button>
             </article>
 
             <article>
                 <h3>H1Z1</h3>
                 <img src="img/jeux/h1z1.jpg" alt="Personnage armé dans H1Z1" />
                 <p>H1Z1 est un pionnier du Battle Royale où les joueurs s'affrontent pour être le dernier survivant.</p>
-                <button onclick="ouvrir('modal-h1z1')">En savoir plus</button>
+                <button onclick="ouvrir('modal-h1z1')" aria-controls="modal-h1z1" aria-label="En savoir plus sur H1Z1">En savoir plus</button>
             </article>
         </section>
 
-        <section id="animes">
-            <h2>Animés</h2>
+        <section id="animes" aria-labelledby="titre-animes">
+            <h2 id="titre-animes">Animés</h2>
 
             <article>
                 <h3>Bleach</h3>
                 <img src="img/animes/bleach.png" alt="Ichigo Kurosaki de Bleach" />
                 <p>Bleach suit les aventures d'Ichigo, un humain devenu Shinigami chargé de protéger les âmes.</p>
-                <button onclick="ouvrir('modal-bleach')">En savoir plus</button>
+                <button onclick="ouvrir('modal-bleach')" aria-controls="modal-bleach" aria-label="En savoir plus sur Bleach">En savoir plus</button>
             </article>
 
             <article>
                 <h3>Solo Leveling</h3>
                 <img src="img/animes/solo_leveling.jpg" alt="Sung Jin-Woo" />
                 <p>Solo Leveling raconte la montée en puissance de Jin-Woo dans un monde rempli de donjons.</p>
-                <button onclick="ouvrir('modal-sl')">En savoir plus</button>
+                <button onclick="ouvrir('modal-sl')" aria-controls="modal-sl" aria-label="En savoir plus sur Solo Leveling">En savoir plus</button>
             </article>
 
             <article>
                 <h3>My Hero Academia</h3>
                 <img src="img/animes/my_hero_academia.jpg" alt="Izuku Midoriya" />
                 <p>Dans un monde où presque tout le monde possède un pouvoir, Izuku rêve de devenir un héros.</p>
-                <button onclick="ouvrir('modal-mha')">En savoir plus</button>
+                <button onclick="ouvrir('modal-mha')" aria-controls="modal-mha" aria-label="En savoir plus sur My Hero Academia">En savoir plus</button>
             </article>
         </section>
 
-        <section id="stats">
-            <h2>Mes statistiques</h2>
+        <section id="stats" aria-labelledby="titre-stats">
+            <h2 id="titre-stats">Mes statistiques</h2>
             
             <table border="1"> 
                 <caption>Récapitulatif de mes passions (Jeux et Animés)</caption>
@@ -134,8 +134,8 @@
             </table>
         </section>
 
-        <section id="contact">
-            <h2>Contactez-moi</h2>
+        <section id="contact" aria-labelledby="titre-contact">
+            <h2 id="titre-contact">Contactez-moi</h2>
             <form action="#" method="post">
                 
                 <div class="ligne-identite">
@@ -170,46 +170,46 @@
         <p>Projet accessibilité DFS - Zineddine BEOUCHE</p>
     </footer>
 
-    <dialog id="modal-lol">
-        <h3>League of Legends</h3>
+    <dialog id="modal-lol" aria-labelledby="titre-modal-lol">
+        <h3 id="titre-modal-lol">League of Legends</h3>
         <p><strong>Pourquoi j'aime :</strong> La stratégie d'équipe, les mécaniques de jeu et l'esport.</p>
         <p><strong>Meilleur souvenir :</strong> L'arrivée en LEC de la KCORP.</p>
-        <button onclick="fermer('modal-lol')">Fermer</button>
+        <button onclick="fermer('modal-lol')" aria-label="Fermer la fenêtre League of Legends">Fermer</button>
     </dialog>
 
-    <dialog id="modal-rl">
-        <h3>Rocket League</h3>
+    <dialog id="modal-rl" aria-labelledby="titre-modal-rl">
+        <h3 id="titre-modal-rl">Rocket League</h3>
         <p><strong>Pourquoi j'aime :</strong> La liberté dans les déplacement, la créativité et l'esport.</p>
         <p><strong>Meilleur souvenir :</strong> Les coupe du monde 2025 à Lyon que j'ai pu suivre sur place.</p>
-        <button onclick="fermer('modal-rl')">Fermer</button>
+        <button onclick="fermer('modal-rl')" aria-label="Fermer la fenêtre Rocket League">Fermer</button>
     </dialog>
 
-    <dialog id="modal-h1z1">
-        <h3>H1Z1</h3>
+    <dialog id="modal-h1z1" aria-labelledby="titre-modal-h1z1">
+        <h3 id="titre-modal-h1z1">H1Z1</h3>
         <p><strong>Pourquoi j'aime :</strong> L'ambiance, le stress et les mécaniques de tir (double tap).</p>
         <p><strong>Meilleur souvenir :</strong> Mes parties en duo avec mon cousin.</p>
-        <button onclick="fermer('modal-h1z1')">Fermer</button>
+        <button onclick="fermer('modal-h1z1')" aria-label="Fermer la fenêtre H1Z1">Fermer</button>
     </dialog>
 
-    <dialog id="modal-bleach">
-        <h3>Bleach</h3>
+    <dialog id="modal-bleach" aria-labelledby="titre-modal-bleach">
+        <h3 id="titre-modal-bleach">Bleach</h3>
         <p><strong>Pourquoi j'aime :</strong> Les émotions, les combats et les OST.</p>
         <p><strong>Meilleur souvenir :</strong> Les entrées d'Ichigo avec l'OST Number One de Shiro SAGISU.</p>
-        <button onclick="fermer('modal-bleach')">Fermer</button>
+        <button onclick="fermer('modal-bleach')" aria-label="Fermer la fenêtre Bleach">Fermer</button>
     </dialog>
 
-    <dialog id="modal-sl">
-        <h3>Solo Leveling</h3>
+    <dialog id="modal-sl" aria-labelledby="titre-modal-sl">
+        <h3 id="titre-modal-sl">Solo Leveling</h3>
         <p><strong>Pourquoi j'aime :</strong> L'évolution du héros et les combats épiques.</p>
         <p><strong>Meilleur souvenir :</strong> Le combat de Sung Jinwoo contre Beru.</p>
-        <button onclick="fermer('modal-sl')">Fermer</button>
+        <button onclick="fermer('modal-sl')" aria-label="Fermer la fenêtre Solo Leveling">Fermer</button>
     </dialog>
 
-    <dialog id="modal-mha">
-        <h3>My Hero Academia</h3>
+    <dialog id="modal-mha" aria-labelledby="titre-modal-mha">
+        <h3 id="titre-modal-mha">My Hero Academia</h3>
         <p><strong>Pourquoi j'aime :</strong> L'émotion des combats et des OST épiques.</p>
         <p><strong>Meilleur souvenir :</strong> Le combat d'Izuku Midoriya contre Katsuki Bakugo.</p>
-        <button onclick="fermer('modal-mha')">Fermer</button>
+        <button onclick="fermer('modal-mha')" aria-label="Fermer la fenêtre My Hero Academia">Fermer</button>
     </dialog>
 
     <script>
